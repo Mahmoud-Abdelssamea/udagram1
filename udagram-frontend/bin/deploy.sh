@@ -1,1 +1,1 @@
-aws s3 cp --recursive  ./build s3://udagramstaticfiles/
+aws s3 cp --recursive  ./www s3://udagramstaticfiles/
