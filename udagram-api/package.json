@@ -9,7 +9,7 @@
     "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "tsc && node ./www/server.js",
     "clean": "npx rimraf www/ || true",
-    "build": "npm run clean && tsc && cpy src/config www/ && cpy .npmrc www/ && cpy package.json www/ && cd www && zip -r Archive.zip . && cd ..",
+    "build": "npm run clean && tsc && cpy src/config www/ && cpy .npmrc www/ && cpy package.json www/ && cd www && zip -r Archive.zip ../ && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "eb use udagram-api-dev && eb deploy udagram-api-dev"
 
