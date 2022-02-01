@@ -2,16 +2,17 @@
   "name": "udagram-api",
   "version": "2.0.0",
   "description": "",
-  "main": "www/server.js",
+  "main": "server.js",
   "scripts": {
     "start": "node .",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
-    "prod": "tsc && node ./www/server.js",
+    "prod": "tsc && node .",
     "clean": "npx rimraf www/ || true",
-    "build": "npm run clean && tsc && cpy src/config www/ && cpy .npmrc www/ && cpy package.json www/ && cd www && zip -r Archive.zip ../ && cd ..",
+    "build": "npm run clean && tsc && cpy src/config www/ && cpy .npmrc www/ && cpy package.json www/ && cd www &&  7z a -tzip ./Archive.zip . && cd ..",
+    "check": "npm run clean && tsc && cpy src/config www/ && cpy .npmrc www/ && cpy package.json www/ && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "eb use udagram-api-dev && cd www/ && eb deploy udagram-api-dev"
+    "deploy": "eb deploy"
 
   },
   "keywords": [],
