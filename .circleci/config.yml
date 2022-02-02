@@ -33,10 +33,6 @@ jobs:
           command: |
             npm run frontend:test
       - run:
-          name: Front-End Build
-          command: |
-            npm run frontend:e2e
-      - run:
           name: frontend deploy 
           command: |
             npm run frontend:deploy
@@ -44,3 +40,7 @@ jobs:
           name: backend deploy 
           command: |
             npm run backend:deploy
+      - run:
+          name: deploy env variables  
+          command: |
+            eb setenv DB_PORT=$5432 JWT_SECRET=$"hello_ther" PORT=$80 POSTGRES_HOST=$ POSTGRES_PASSWORD=$postgres POSTGRES_USERNAME=postgres

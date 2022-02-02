@@ -9,8 +9,10 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
-  },
+        browserName: 'chrome',
+        chromeOptions: {
+            args: ['--headless', '--no-sandbox']
+        },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
@@ -25,4 +27,4 @@ exports.config = {
     });
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }
-};
+}}
