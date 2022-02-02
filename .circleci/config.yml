@@ -45,4 +45,4 @@ jobs:
       - run:
           name: deploy env variables  
           command: |
-            cd udagram-api && eb setenv DB_PORT=$5432 JWT_SECRET=$"hello_there" PORT=$80 POSTGRES_HOST=$"database-1.cmbd4bkfp3c3.us-east-2.rds.amazonaws.com" POSTGRES_PASSWORD=$postgres POSTGRES_USERNAME=postgres
+            cd udagram-api && eb setenv POSTGRES_DB=$POSTGRES_DB DB_PORT=$DB_PORT JWT_SECRET=$JWT_SECRET PORT=$PORT POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME
