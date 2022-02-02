@@ -45,4 +45,4 @@ jobs:
       - run:
           name: deploy env variables  
           command: |
-            eb setenv DB_PORT=$5432 JWT_SECRET=$"hello_ther" PORT=$80 POSTGRES_HOST=$ POSTGRES_PASSWORD=$postgres POSTGRES_USERNAME=postgres
+            cd udagram-ap && eb setenv DB_PORT=$5432 JWT_SECRET=$"hello_ther" PORT=$80 POSTGRES_HOST=$ POSTGRES_PASSWORD=$postgres POSTGRES_USERNAME=postgres
