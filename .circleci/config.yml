@@ -47,9 +47,9 @@ jobs:
           command: |
             cd udagram-api && eb setenv POSTGRES_DB=$POSTGRES_DB DB_PORT=$DB_PORT JWT_SECRET=$JWT_SECRET PORT=$PORT POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME
 workflows:
-  master: # workflow label
+  main: # workflow label
     jobs:
-      - build-deploy:
+      - build:
           filters:
             branches:
               only:
