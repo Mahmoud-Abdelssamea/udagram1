@@ -49,7 +49,7 @@ jobs:
 workflows:
   main:
     jobs:
-      - build-deploy:
+      - build:
           filters:
             branches:
               only:
